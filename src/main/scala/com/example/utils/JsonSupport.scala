@@ -12,7 +12,7 @@ trait JsonSupport extends SprayJsonSupport with DefaultJsonProtocol {
   // Assuming Product class has the following fields: id, name, description, price, categoryId
   implicit val productFormat = jsonFormat5(Product)
 
-  implicit val cartItemFormat = jsonFormat3(CartItem)
+  implicit val cartItemFormat = jsonFormat2(CartItem)
   implicit val shoppingCartFormat = jsonFormat1(ShoppingCart)
   implicit val orderFormat = jsonFormat5(Order) // Update the numbers according to your case classes
   // Add more formats as needed
